@@ -1,0 +1,24 @@
+<h1>Edit the product</h1>
+<br>
+<%= form_tag("/dogs/#{@dogs.id}", :method => :patch) do %>
+<ul>
+<li>
+<h4><%= label_tag :Name %>
+<%= text_field_tag :name, @dogs.name %></h4></li>
+<li><h4><%= label_tag :image %>
+<%= text_field_tag :image, @dogs.image %></h4></li>
+<br>
+<li><h4><%= label_tag :Description %>
+<%= text_field_tag :description, @dogs.description %></h4></li>
+<br>
+<li><h4><%= label_tag :Price %>
+<%= text_field_tag :price, @dogs.price %></h4></li>
+
+<li><h4><%= label_tag :Inventory %>
+<%= text_field_tag :inventory, @dogs.inventory %></li>
+
+
+
+<br>
+</h4><%= submit_tag "Update Item" %></h4></ul>
+<% end %> 

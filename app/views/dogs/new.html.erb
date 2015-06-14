@@ -1,0 +1,29 @@
+<h1> Enter in a new product. </h1>
+<br>
+<%= form_tag '/dogs' do %>
+<ul>
+<li><h4><%= label_tag :Name %>
+<%= text_field_tag :name %></li>
+
+<br>
+<li><h4><%= label_tag :Image_1 %>
+<%= text_field_tag :image_1 %></li>
+
+<li><h4><%= label_tag :Image_2 %>
+<%= text_field_tag :image_2 %></li>
+
+<br>
+<li><h4><%= label_tag :Description %>
+<%= text_field_tag :description %></li>
+<br>
+
+<br>
+<li><h4><%= label_tag :Price %>
+<%= text_field_tag :price %></li>
+
+<li><h4><%= label_tag :Inventory %>
+<%= text_field_tag :inventory %></li>
+
+<br>
+<%= submit_tag "Submit" %></ul>
+<% end %>

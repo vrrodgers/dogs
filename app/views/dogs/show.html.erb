@@ -1,0 +1,21 @@
+
+
+<h1><%= @dog.name%></h1>
+<h2><%=  @dog.price %></h2>
+<h2> Tax: <%= @dog.sales_tax %> </h2>
+<h2> Total: <%= @dog.sales_total %></h2>
+<h3><%= @dog.sale_message %></h3>
+<img src "<%= @dog.images.first.image_url %>"
+<h4> <%= @dog.supplier.name %><h4>
+<h4><%= @dog.description %></h4> 
+<h4><%= @dog.current_inventory %></h4>
+
+<%= form_tag "/orders" do %>
+<%= label_tag :Quantity%>
+<%= text_field_tag :Quantity %>
+<%= label_tag :product%>
+<%= text_field_tag :product %>
+
+<%= submit_tag "Buy Now" %>
+<%end%>
+<p><a href="/dogs/<%= @dog.id %>/edit" class="btn btn-primary" role="button">Edit</a> <a href="/dogs/<%= @dog.id %>" data-method="delete" rel="nofollow" data-confirm="Are you sure?" class="btn btn-default" role="button">Delete</a></p>
